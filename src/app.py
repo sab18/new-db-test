@@ -31,7 +31,9 @@ def callbk(n_clicks, input_val):
         insert_query = "INSERT INTO test_table (name, name2) VALUES (?, ?)"
         cursor.execute(insert_query, (input_val, 'extra_col'))
         conn.commit()
-        cursor.close()
+        cursor.close(
+        
+        )
         conn.close()
 
         return f'{input_val} value has been entered'
